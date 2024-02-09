@@ -1,4 +1,5 @@
 window.onload=function(){
+    // Variable Defining
     let hour = 0;
     let min  = 0;
     let sec  = 0;
@@ -7,7 +8,7 @@ window.onload=function(){
   
   
  
-    let appendhour = document.querySelector('#hour')
+//  selecting  Css Tag
     let appendmin = document.querySelector('#min')
     let appendsec = document.querySelector('#sec')
     let appendmsec = document.querySelector('#msec')
@@ -17,7 +18,7 @@ window.onload=function(){
     let stopButton = document.querySelector('.stop-time')
     let resetButton = document.querySelector('.reset-time')
 
-
+// Start timer function
    const startTimer = () => {
 
 
@@ -50,26 +51,9 @@ window.onload=function(){
             sec  =  0 ;
             appendsec.innerHTML = '0'+ 0;
 
-        }
-
-        // if(hour > 9 ){
-        //     appendhour.innerHTML = hour;
-        // }
-
-        // if(hour > 24 ){
-        //     min++
-        //     appendmin.innerHTML = '0' + min;
-        //     sec  =  0 ;
-        //     appendsec.innerHTML = '0'+ 0;
-
-        // }
+        }    
    }
-
-     
-
-       
-
-
+//  button function
     startButton.onclick = () => {
         clearInterval(interval)
         interval = setInterval(startTimer);
